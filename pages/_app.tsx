@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { wrapper } from "@store";
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -16,7 +17,14 @@ function MyApp({ Component, pageProps }: AppProps) {
       offset: 50,
     });
   }, []);
-  return <Component {...pageProps} />;
+  return (
+    <>
+      <Head>
+        <link rel="icon" href="/logo.svg" />
+      </Head>
+      <Component {...pageProps} />;
+    </>
+  );
 }
 
 // export default MyApp;

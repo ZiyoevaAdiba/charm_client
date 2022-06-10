@@ -32,7 +32,6 @@ export const useQueryParams = () => {
       url: asPath,
       query: newParams,
     });
-    console.log(newParams);
 
     //get data that is already in server so that page will be refreshed
     if (

@@ -12,10 +12,8 @@ const nextConfig = {
       "charm.tj",
       "www.designitalianshoes.com",
       "d2si65qo4je8x4.cloudfront.net",
-      "2eb1-193-33-136-250.ngrok.io",
       "192.168.15.199",
-      "0e14-193-33-136-250.ngrok.io",
-      "55f9-193-33-136-250.ngrok.io",
+      "9e7e-193-33-136-250.ngrok.io",
     ],
   },
   env: {

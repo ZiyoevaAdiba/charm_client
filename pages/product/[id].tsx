@@ -1,12 +1,11 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import Head from "next/head";
-import { ILangTitles, IProductDTO, IProductImage } from "@interfaces";
+import { ILangTitles, IProductDTO } from "@interfaces";
 import { Send } from "@utils";
 import { Apis, characteristics, characteristicsTitle, seasons } from "@consts";
 import { useRouter } from "next/router";
 import { MainLayout } from "src/layouts";
 import { Characteristic, ImageSlider } from "components";
-import { useEffect } from "react";
 import { ColorBoxes } from "components/shop/ColorBoxes";
 
 interface IProps {
@@ -20,7 +19,7 @@ const ProductDetail: NextPage<IProps> = ({ product }) => {
   return (
     <>
       <Head>
-        <title>Страница продукта {product.name[locale as ILangTitles]}</title>I
+        <title>Страница продукта {product.name[locale as ILangTitles]}</title>
       </Head>
       {/* product detail page like in market stores */}
 
