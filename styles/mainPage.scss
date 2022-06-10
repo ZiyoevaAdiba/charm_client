@@ -1,0 +1,139 @@
+.icon-background-default {
+  color: #03c4eb;
+}
+
+.feature-icon {
+  color: #fff;
+}
+
+.feature-item:hover .icon-background-default {
+  color: #333333;
+  transform: scale(1.1);
+  transition: all 0.5s ease;
+}
+
+.fa-4x {
+  font-size: 3.5em;
+}
+
+.counter-number {
+  font-size: 3.125rem;
+  font-weight: 800;
+  color: #03c4eb;
+  line-height: 1;
+  font-family: serif, sans-serif;
+}
+
+.counter-title{
+  font-size: 1.2rem;
+}
+
+.footer{
+  padding: 10px 0px; 
+  background: #222222;
+  color: #ddd;
+  font-size: 14px;
+  margin-top: auto;
+
+  h5{
+    color: #dddddd;
+  }
+  p{
+    text-align: left;
+  }
+  ul{
+    padding: 0px;
+  }
+  .footer-item{
+    float: left;
+  }
+}
+
+li{
+  list-style: none;
+}
+
+.form-inputs{
+  background-color: #f2f2f2;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 12%) inset;
+  border: none;
+  border-bottom: 1px solid white;
+}
+
+.form-control:focus {
+  background-color: #f2f2f2;
+}
+
+.card-text{
+  display: -webkit-box;
+  font-size: 14px;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.footer-scroll-up{
+  a{
+    border-radius: 0px 20px 0 0;
+    color: #999999;
+    background: #222222;
+    display: block;
+    font-size: 30px;
+    height: 50px;
+    line-height: 50px;
+    margin: auto;
+    position: absolute;
+    right: 60px;
+    top: -25px;
+    transition: all 0.2s linear 0s;
+    width: 50px;
+    transform: rotate(-45deg);
+    i{
+    transform: rotate(45deg);
+    margin-left: 15px;
+    }
+  }
+}
+
+select {
+  background-color: inherit;
+  border: none;
+}
+
+.shoe-category-title{
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  font-size: 14px;
+  &:hover{
+    color: #03c4eb;
+    cursor: pointer;
+  }
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 35%;
+    width: 30%;
+    height: 1px;
+    background: #cccccc;
+    bottom: 16px;
+  }
+}
+
+.product-link-hover:hover {
+  color: #03c4eb;
+  cursor: pointer;
+}
+
+section{
+  padding: 75px 60px 0px 60px;
+  @media screen and (max-width: 768px) {
+    padding: 75px 15px 0px 15px;  
+  }
+  
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 0.1rem rgb(3 196 235 / 25%);
+}
