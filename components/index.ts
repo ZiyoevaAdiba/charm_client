@@ -8,4 +8,5 @@ export * from "./shop/Main";
 export * from "./shop/SearchInput";
 export * from "./shop/ImageSlider";
 export * from "./shop/Characteristic";
+export * from "./shop/ImageModal";
 export * from "./LanguageSelector";

@@ -1,4 +1,4 @@
-import { seasons, seasonTitle, UrlParams } from "@consts";
+import { categoryIn4Languages, seasons, seasonTitle, UrlParams } from "@consts";
 import { ILangTitles } from "@interfaces";
 import { getShoeCategories } from "../../src/store/slices/products/filters";
 import { useAppDispatch, useAppSelector } from "@store";
@@ -68,7 +68,6 @@ export const Filters = () => {
     } else {
       addQueryParams(params);
     }
-    
   };
 
   return loading ? (
@@ -90,7 +89,7 @@ export const Filters = () => {
                 data-bs-target="#about-collapse"
                 aria-expanded="false"
               >
-                Категории
+                {categoryIn4Languages[locale as ILangTitles]}
               </p>
               <div className="collapse show" id="about-collapse">
                 {categories.map((category, index) => (

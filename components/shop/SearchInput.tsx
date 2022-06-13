@@ -117,7 +117,7 @@ export const SearchInput = () => {
           <div className="dropdown-menu w-100 d-block mt-2">
             {products.length > 0 ? (
               products.map((product) => (
-                <a key={product.id} href={`${Routes.shop}/${product.id}`}>
+                <a key={product.id} href={`${Routes.product(product.id)}`}>
                   <div className="dropdown-item">
                     <h6>{product.name[locale as ILangTitles]}</h6>
                   </div>
