@@ -2,9 +2,9 @@ import Image from "next/image";
 import React from "react";
 import { useRouter } from "next/router";
 import { navmenuItems, companyDescriptionLogo } from "@consts";
-import logo from "../../public/logo.svg";
+import logo from "@public/logo.svg";
 import { ILangTitles } from "@interfaces";
-import { LanguageSelector } from "components";
+import { LanguageSelector } from "@components";
 
 export const Navbar = () => {
   const router = useRouter();

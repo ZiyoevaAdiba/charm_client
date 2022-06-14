@@ -10,7 +10,6 @@ export const Video = () => {
         className="parallax-bg"
         data-stellar-ratio="0.2"
         data-stellar-offset-parent="true"
-        // style='background-image: url("http://charm.tj/wp-content/uploads/2017/11/d-ng-tr-n-qu-c-104956.jpg"); height: 862px; background-position: 50% -231.764px;'
       ></div>
       <section
         id="videolightbox"

@@ -15,7 +15,7 @@ import {
   Contacts,
   ShoesCategories,
   Video,
-} from "../components/mainPage";
+} from "@components/mainPage";
 
 interface IProps {
   bannerImages: IBannerDTO[];

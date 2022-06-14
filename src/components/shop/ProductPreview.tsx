@@ -7,9 +7,9 @@ import { useAppDispatch, useAppSelector } from "@store";
 import { ILangTitles, IProductDTO } from "@interfaces";
 import { noResultsText, Routes } from "@consts";
 import { findMainImage } from "@utils";
-import { getProducts } from "../../src/store/slices/products";
-import { Pagination } from "components";
-import ImagePlaceholder from "../../public/product-placeholder.png";
+import { getProducts } from "@slices";
+import { Pagination } from "@components/shop";
+import ImagePlaceholder from "@public/product-placeholder.png";
 
 export const ProductPreview = ({ products }: { products: IProductDTO[] }) => {
   const { locale, query } = useRouter();

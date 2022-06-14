@@ -6,8 +6,8 @@ import "slick-carousel/slick/slick-theme.css";
 import styles from "@styles/productSlider.module.scss";
 import { IProductImage } from "@interfaces";
 import { useAppSelector } from "@store";
-import { ImageModal } from "components";
-import ImagePlaceholder from "../../public/product-placeholder.png";
+import { ImageModal } from "@components/shop";
+import ImagePlaceholder from "@public/product-placeholder.png";
 
 export const ImageSlider: FC<{ productImages: IProductImage[] }> = ({
   productImages,

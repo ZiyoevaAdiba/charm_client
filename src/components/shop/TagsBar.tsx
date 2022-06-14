@@ -28,10 +28,6 @@ export const TagsBar: FC<{ compLocation: string }> = ({ compLocation }) => {
                   query: {
                     ...(sort && { sort }),
                   },
-
-                  // sort
-                  //   ? `${Routes.shop}/${category.value}?sort=${sort}`
-                  //   : `${Routes.shop}/${category.value}`
                 }
           }
           key={index}

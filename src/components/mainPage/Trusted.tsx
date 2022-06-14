@@ -3,12 +3,12 @@ import Slider from "react-slick";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { clientsNames, trustedTitle } from "@consts";
-import im1 from "../../public/trusted/barkiDushanbe.jpg";
-import im2 from "../../public/trusted/gvardiya.jpg";
-import im3 from "../../public/trusted/kdam.jpg";
-import im4 from "../../public/trusted/barkiTojik.jpg";
-import im5 from "../../public/trusted/rogun.jpg";
-import im6 from "../../public/trusted/talko.jpg";
+import im1 from "@public/trusted/barkiDushanbe.jpg";
+import im2 from "@public/trusted/gvardiya.jpg";
+import im3 from "@public/trusted/kdam.jpg";
+import im4 from "@public/trusted/barkiTojik.jpg";
+import im5 from "@public/trusted/rogun.jpg";
+import im6 from "@public/trusted/talko.jpg";
 import { ILangTitles } from "@interfaces";
 
 export const Trusted = () => {
@@ -51,7 +51,6 @@ export const Trusted = () => {
             {[im1, im2, im3, im4, im5, im6].map((img, i) => (
               <div
                 key={i}
-                // className="d-flex justify-content-center align-items-center px-1"
               >
                 <Image
                   src={img}

@@ -4,10 +4,10 @@ import Head from "next/head";
 import { IProductsResponse } from "@interfaces";
 import { Apis } from "@consts";
 import { Send } from "@utils";
-import { ShopTopBar, TagsBar, Main } from "components";
 import { AppStore, wrapper } from "@store";
-import { setProducts } from "../../src/store/slices/products";
-import { MainLayout } from "src/layouts";
+import { setProducts } from "@slices";
+import { MainLayout } from "@layouts";
+import { Main, ShopTopBar, TagsBar } from "@components/shop";
 
 const Products: NextPage = () => {
   return (

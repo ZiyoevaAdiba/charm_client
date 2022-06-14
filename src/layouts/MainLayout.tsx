@@ -1,6 +1,6 @@
 import React, { FC, ReactNode } from "react";
-import { ShopNavBar } from "components";
-import { Footer } from "components/mainPage";
+import { Footer } from "@components/mainPage";
+import { ShopNavBar } from "@components/shop";
 
 export const MainLayout: FC<{
   children?: ReactNode;

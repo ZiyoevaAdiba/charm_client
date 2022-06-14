@@ -4,10 +4,10 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { productsTitle, productsTypes } from "@consts";
 import { ILangTitles } from "@interfaces";
-import { HoverWrapper } from "./HoverWrapper";
-import prodIm1 from "../../public/products/shoe.png";
-import prodIm2 from "../../public/products/leather.png";
-import prodIm3 from "../../public/products/sole.png";
+import { HoverWrapper } from "@components/mainPage";
+import prodIm1 from "@public/products/shoe.png";
+import prodIm2 from "@public/products/leather.png";
+import prodIm3 from "@public/products/sole.png";
 
 export const Products = () => {
   const { locale } = useRouter();

@@ -1,7 +1,6 @@
 import { useRouter } from "next/router";
 import { useAppSelector } from "@store";
-import { Filters } from "./Filters";
-import { ProductPreview } from "./ProductPreview";
+import { Filters, ProductPreview } from "@components/shop";
 
 export const Main = () => {
   const { query } = useRouter();

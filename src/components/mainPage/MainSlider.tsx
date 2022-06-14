@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from "@styles/mainSlider.module.scss";
 import { IBannerDTO } from "@interfaces";
-import ImagePlaceholder from "../../public/product-placeholder.png";
+import ImagePlaceholder from "@public/product-placeholder.png";
 
 export const MainSlider = ({
   bannerImages,

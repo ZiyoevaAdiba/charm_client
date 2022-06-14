@@ -1,13 +1,13 @@
 import Head from "next/head";
 import React, { useEffect } from "react";
 import { useRouter } from "next/router";
-import { useQueryParams } from "hooks/useQueryParams";
 import { useAppDispatch, useAppSelector } from "@store";
-import { MainLayout } from "src/layouts";
-import { ProductPreview, TagsBar } from "components";
+import { MainLayout } from "@layouts";
 import { Routes, searchResultText, sortDropdownText } from "@consts";
 import { ILangTitles } from "@interfaces";
-import { getProducts } from "../src/store/slices/products";
+import { getProducts } from "@slices";
+import { useQueryParams } from "@hooks";
+import { ProductPreview, TagsBar } from "@components/shop";
 
 const Search = () => {
   const dispatch = useAppDispatch();
@@ -15,7 +15,7 @@ const Search = () => {
   const router = useRouter();
   const { locale, replace } = router;
   const { text, page, sort, mc } = router.query;
-  const { products, loading } = useAppSelector((state) => state.products);
+  const { products } = useAppSelector((state) => state.products);
 
   useEffect(() => {
     if (page || text) {

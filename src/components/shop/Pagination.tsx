@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { UrlParams } from "@consts";
 import { useAppSelector } from "@store";
-import { useQueryParams } from "hooks/useQueryParams";
+import { useQueryParams } from "@hooks";
 
 export const Pagination = () => {
   const { page } = useRouter().query;

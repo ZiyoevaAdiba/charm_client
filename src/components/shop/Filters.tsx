@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 import { useAppDispatch, useAppSelector } from "@store";
-import { useQueryParams } from "hooks/useQueryParams";
+import { useQueryParams } from "@hooks";
 import Skeleton from "react-loading-skeleton";
 import { categoryIn4Languages, seasons, seasonTitle, UrlParams } from "@consts";
 import { ILangTitles } from "@interfaces";
-import { getShoeCategories } from "../../src/store/slices/products/filters";
+import { getShoeCategories } from "@slices";
 
 export const Filters = () => {
   const { locale, query } = useRouter();

@@ -1,7 +1,7 @@
 import React from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
-import logo from "../../public/logo.svg";
+import logo from "@public/logo.svg";
 import {
   companyAddress,
   companyDescription,
@@ -10,7 +10,7 @@ import {
 } from "@consts";
 
 export const Footer = () => {
-  const { locale, pathname } = useRouter();
+  const { locale } = useRouter();
 
   return (
     <footer className="footer">

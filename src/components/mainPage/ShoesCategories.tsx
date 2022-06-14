@@ -3,10 +3,10 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { navmenuItems, Routes, shoesCategories } from "@consts";
 import { ILangTitles } from "@interfaces";
-import im1 from "../../public/categories/mardona.jpeg";
-import im2 from "../../public/categories/kudacona.jpeg";
-import im3 from "../../public/categories/harbi.png";
-import { HoverWrapper } from "./HoverWrapper";
+import im1 from "@public/categories/mardona.jpeg";
+import im2 from "@public/categories/kudacona.jpeg";
+import im3 from "@public/categories/harbi.png";
+import { HoverWrapper } from "@components/mainPage";
 
 export const ShoesCategories = () => {
   const { locale } = useRouter();

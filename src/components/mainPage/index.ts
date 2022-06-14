@@ -4,7 +4,6 @@ export * from "./About";
 export * from "./Advantages";
 export * from "./Trusted";
 export * from "./Products";
-export * from "../shop/ProductPreview";
 export * from "./Achievements";
 export * from "./Footer";
 export * from "./Contacts";

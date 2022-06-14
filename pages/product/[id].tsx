@@ -12,9 +12,8 @@ import {
   Routes,
   seasons,
 } from "@consts";
-import { MainLayout } from "src/layouts";
-import { Characteristic, ImageSlider } from "components";
-import { ColorBoxes } from "components/shop/ColorBoxes";
+import { Characteristic, ColorBoxes, ImageSlider } from "@components/shop";
+import { MainLayout } from "@layouts";
 
 interface IProps {
   product: IProductDTO;

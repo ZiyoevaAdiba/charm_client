@@ -4,9 +4,9 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { companyDescriptionLogo, Routes } from "@consts";
 import { ILangTitles } from "@interfaces";
-import { LanguageSelector } from "components";
-import { SearchInput } from "./SearchInput";
-import logo from "../../public/logo.svg";
+import { LanguageSelector } from "@components";
+import { SearchInput } from "@components/shop";
+import logo from "@public/logo.svg";
 
 export const ShopNavBar = () => {
   const { locale } = useRouter();
