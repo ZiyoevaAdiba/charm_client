@@ -1,9 +1,8 @@
-import dynamic from "next/dynamic";
 import React from "react";
-import { achievementsItems, achievementsTitle } from "@consts";
+import { useRouter } from "next/router";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
-import { useRouter } from "next/router";
+import { achievementsItems, achievementsTitle } from "@consts";
 import { ILangTitles } from "@interfaces";
 
 export const Achievements = () => {

@@ -1,8 +1,8 @@
 import React from "react";
-import { productsTitle, productsTypes } from "@consts";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { productsTitle, productsTypes } from "@consts";
 import { ILangTitles } from "@interfaces";
 import { HoverWrapper } from "./HoverWrapper";
 import prodIm1 from "../../public/products/shoe.png";

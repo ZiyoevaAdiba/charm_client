@@ -1,5 +1,5 @@
-import { useRouter } from "next/router";
 import React, { ChangeEvent } from "react";
+import { useRouter } from "next/router";
 
 export const LanguageSelector = () => {
   const router = useRouter();

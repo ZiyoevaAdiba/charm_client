@@ -1,7 +1,6 @@
+import { useAppDispatch, useAppSelector } from "@store";
 import { IProductImage } from "@interfaces";
 import { setProductColor } from "../../src/store/slices";
-import { useAppDispatch, useAppSelector } from "@store";
-import React from "react";
 
 export const ColorBoxes = ({
   productImages,

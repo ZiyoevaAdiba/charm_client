@@ -1,14 +1,14 @@
 import React from "react";
 import Slider from "react-slick";
-import { clientsNames, trustedTitle } from "@consts";
 import Image from "next/image";
+import { useRouter } from "next/router";
+import { clientsNames, trustedTitle } from "@consts";
 import im1 from "../../public/trusted/barkiDushanbe.jpg";
 import im2 from "../../public/trusted/gvardiya.jpg";
 import im3 from "../../public/trusted/kdam.jpg";
 import im4 from "../../public/trusted/barkiTojik.jpg";
 import im5 from "../../public/trusted/rogun.jpg";
 import im6 from "../../public/trusted/talko.jpg";
-import { useRouter } from "next/router";
 import { ILangTitles } from "@interfaces";
 
 export const Trusted = () => {

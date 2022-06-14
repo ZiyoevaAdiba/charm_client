@@ -1,11 +1,17 @@
 import React from "react";
+import Image from "next/image";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Image from "next/image";
 import styles from "@styles/mainSlider.module.scss";
+import { IBannerDTO } from "@interfaces";
+import ImagePlaceholder from "../../public/product-placeholder.png";
 
-export const MainSlider = () => {
+export const MainSlider = ({
+  bannerImages,
+}: {
+  bannerImages: IBannerDTO[];
+}) => {
   const settings = {
     dots: true,
     infinite: true,
@@ -33,13 +39,17 @@ export const MainSlider = () => {
   return (
     <div className="container pt-3 pb-5">
       <Slider {...settings} className={`${styles.banner_height}`}>
-        {[
-          "https://www.designitalianshoes.com/sites/default/themes/dis/img/home-banner/custom-handmade-shoes-for-men-and-women-online-dis.jpg",
-          "http://charm.tj/wp-content/uploads/2017/11/matthew-henry-6205-2.jpg",
-          "https://d2si65qo4je8x4.cloudfront.net/media/wysiwyg/BANNER.jpg",
-        ].map((i) => (
-          <div key={i} className={styles.banner_height}>
-            <Image key={i} src={i} alt="img" layout="fill" objectFit="cover" />
+        {bannerImages.map((i) => (
+          <div key={i.id} className={styles.banner_height}>
+            <Image
+              src={
+                process.env.NEXT_PUBLIC_API_CHARM_TJ + i.imagePath ||
+                ImagePlaceholder
+              }
+              alt="img"
+              layout="fill"
+              objectFit="cover"
+            />
           </div>
         ))}
       </Slider>

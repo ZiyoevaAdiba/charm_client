@@ -1,16 +1,15 @@
+import React, { useEffect } from "react";
+import { useRouter } from "next/router";
+import { useAppDispatch, useAppSelector } from "@store";
+import { useQueryParams } from "hooks/useQueryParams";
+import Skeleton from "react-loading-skeleton";
 import { categoryIn4Languages, seasons, seasonTitle, UrlParams } from "@consts";
 import { ILangTitles } from "@interfaces";
 import { getShoeCategories } from "../../src/store/slices/products/filters";
-import { useAppDispatch, useAppSelector } from "@store";
-import { useRouter } from "next/router";
-import React, { useEffect } from "react";
-import { getProducts } from "../../src/store/slices/products";
-import Skeleton from "react-loading-skeleton";
-import { useQueryParams } from "hooks/useQueryParams";
 
 export const Filters = () => {
   const { locale, query } = useRouter();
-  const { mc, sort, page, season, c, subc } = query;
+  const { mc, season, c, subc } = query;
   const dispatch = useAppDispatch();
   const { categories } = useAppSelector((state) => state.productsFilters);
   const { loading } = useAppSelector((state) => state.products);
@@ -19,19 +18,6 @@ export const Filters = () => {
   useEffect(() => {
     if (categories.length === 0) dispatch(getShoeCategories());
   }, [mc]);
-
-  useEffect(() => {
-    if (
-      (page === "1" || page == undefined) &&
-      season === undefined &&
-      c === undefined &&
-      subc === undefined &&
-      (sort === "0" || sort == undefined)
-    )
-      return;
-
-    dispatch(getProducts({ mc, sort, page, season, c, subc }));
-  }, [page, season, c, subc]);
 
   const handleFilterChange = (
     key: string,

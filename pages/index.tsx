@@ -1,5 +1,8 @@
-import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
+import type { GetStaticProps, NextPage } from "next";
+import { Apis } from "@consts";
+import { IBannerDTO } from "@interfaces";
+import { Send } from "@utils";
 import {
   About,
   Achievements,
@@ -11,9 +14,14 @@ import {
   MainSlider,
   Contacts,
   ShoesCategories,
+  Video,
 } from "../components/mainPage";
 
-const Home: NextPage = () => {
+interface IProps {
+  bannerImages: IBannerDTO[];
+}
+
+const Home: NextPage<IProps> = ({ bannerImages }) => {
   return (
     <>
       <Head>
@@ -32,10 +40,11 @@ const Home: NextPage = () => {
 
       <>
         <Navbar />
-        <MainSlider />
+        <MainSlider bannerImages={bannerImages} />
         <Advantages />
         <About />
         <Products />
+        <Video />
         <Trusted />
         <Achievements />
         <ShoesCategories />
@@ -44,6 +53,16 @@ const Home: NextPage = () => {
       </>
     </>
   );
+};
+
+export const getStaticProps: GetStaticProps = async ({ params }: any) => {
+  const bannerImages: IBannerDTO[] = await Send.Request("GET", Apis.getBanners);
+  return {
+    props: {
+      bannerImages,
+    },
+    revalidate: 60,
+  };
 };
 
 export default Home;

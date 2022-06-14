@@ -1,5 +1,4 @@
 import { CharacteristicProps } from "@interfaces";
-import React from "react";
 
 export const Characteristic = ({ title, value }: CharacteristicProps) => {
   return (

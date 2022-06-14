@@ -8,13 +8,7 @@ const nextConfig = {
     defaultLocale: "ru",
   },
   images: {
-    domains: [
-      "charm.tj",
-      "www.designitalianshoes.com",
-      "d2si65qo4je8x4.cloudfront.net",
-      "192.168.15.199",
-      "9e7e-193-33-136-250.ngrok.io",
-    ],
+    domains: ["178.157.91.23"],
   },
   env: {
     BASE_URL: process.env.BASE_URL,

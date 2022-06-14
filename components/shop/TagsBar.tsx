@@ -1,8 +1,8 @@
-import { productsMainCategories, productsTypesTitles, Routes } from "@consts";
-import { ILangTitles } from "@interfaces";
+import React, { FC } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { FC, useState } from "react";
+import { ILangTitles } from "@interfaces";
+import { productsMainCategories, Routes } from "@consts";
 
 export const TagsBar: FC<{ compLocation: string }> = ({ compLocation }) => {
   const { query, locale } = useRouter();

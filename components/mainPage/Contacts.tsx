@@ -1,3 +1,5 @@
+import { useRouter } from "next/router";
+import { ChangeEvent, useState } from "react";
 import {
   companyAddress,
   contactsButton,
@@ -7,8 +9,6 @@ import {
   contactsTitle,
 } from "@consts";
 import { contactType, ILangTitles } from "@interfaces";
-import { useRouter } from "next/router";
-import { ChangeEvent, useState } from "react";
 
 export const Contacts = () => {
   const { locale } = useRouter();

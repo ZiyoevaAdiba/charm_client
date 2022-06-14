@@ -1,18 +1,34 @@
-import { ILangTitles, IProductDTO, IProductImage } from "@interfaces";
+import React, { useEffect } from "react";
 import Link from "next/link";
-import React from "react";
 import Image from "next/image";
-import { noResultsText, Routes } from "@consts";
 import { useRouter } from "next/router";
-import ImagePlaceholder from "../../public/product-placeholder.png";
-import { Pagination } from "components";
-import { useAppSelector } from "@store";
 import Skeleton from "react-loading-skeleton";
+import { useAppDispatch, useAppSelector } from "@store";
+import { ILangTitles, IProductDTO } from "@interfaces";
+import { noResultsText, Routes } from "@consts";
 import { findMainImage } from "@utils";
+import { getProducts } from "../../src/store/slices/products";
+import { Pagination } from "components";
+import ImagePlaceholder from "../../public/product-placeholder.png";
 
 export const ProductPreview = ({ products }: { products: IProductDTO[] }) => {
-  const { locale } = useRouter();
+  const { locale, query } = useRouter();
   const { loading } = useAppSelector((state) => state.products);
+  const { mc, sort, page, season, c, subc } = query;
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    if (
+      (page === "1" || page == undefined) &&
+      season === undefined &&
+      c === undefined &&
+      subc === undefined &&
+      (sort === "0" || sort == undefined)
+    )
+      return;
+
+    dispatch(getProducts({ mc, sort, page, season, c, subc }));
+  }, [page, season, c, subc]);
 
   return (
     <div className="container py-3 max-vh-100">

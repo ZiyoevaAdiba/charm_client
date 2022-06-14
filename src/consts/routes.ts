@@ -7,6 +7,7 @@ export const Apis: Readonly<{
   searchProducts: "api/product/search",
   getProductById: (id: string) => `api/product/getproductbyid?productId=${id}`,
   getProductsIds: "api/product/getproductsid",
+  getBanners: "api/banner/getallbanners",
 };
 
 export const Routes: Readonly<{

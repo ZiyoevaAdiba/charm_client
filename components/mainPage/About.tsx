@@ -1,7 +1,7 @@
+import React from "react";
+import { useRouter } from "next/router";
 import { navmenuItems, aboutText } from "@consts";
 import { ILangTitles } from "@interfaces";
-import { useRouter } from "next/router";
-import React from "react";
 
 export const About = () => {
   const { locale } = useRouter();

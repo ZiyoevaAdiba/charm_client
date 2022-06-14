@@ -1,12 +1,12 @@
-import { companyDescriptionLogo, Routes, searchPlaceholderText } from "@consts";
-import { useRouter } from "next/router";
 import React from "react";
-import logo from "../../public/logo.svg";
+import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/router";
+import { companyDescriptionLogo, Routes } from "@consts";
 import { ILangTitles } from "@interfaces";
 import { LanguageSelector } from "components";
 import { SearchInput } from "./SearchInput";
-import Link from "next/link";
+import logo from "../../public/logo.svg";
 
 export const ShopNavBar = () => {
   const { locale } = useRouter();

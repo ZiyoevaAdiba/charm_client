@@ -1,8 +1,8 @@
 import React, { FC, useEffect, useState } from "react";
 import Slider from "react-slick";
+import Image from "next/image";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Image from "next/image";
 import styles from "@styles/productSlider.module.scss";
 import { IProductImage } from "@interfaces";
 import { useAppSelector } from "@store";

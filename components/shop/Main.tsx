@@ -1,13 +1,12 @@
-import { useAppSelector } from "@store";
 import { useRouter } from "next/router";
-import React from "react";
+import { useAppSelector } from "@store";
 import { Filters } from "./Filters";
 import { ProductPreview } from "./ProductPreview";
 
 export const Main = () => {
   const { query } = useRouter();
-  const { mc, sort, page, season } = query;
-  const { products, loading } = useAppSelector((state) => state.products);
+  const { mc } = query;
+  const { products } = useAppSelector((state) => state.products);
 
   return (
     <>

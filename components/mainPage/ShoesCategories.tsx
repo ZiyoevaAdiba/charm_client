@@ -1,8 +1,8 @@
-import { navmenuItems, Routes, shoesCategories } from "@consts";
-import { ILangTitles } from "@interfaces";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import Image from "next/image";
+import { navmenuItems, Routes, shoesCategories } from "@consts";
+import { ILangTitles } from "@interfaces";
 import im1 from "../../public/categories/mardona.jpeg";
 import im2 from "../../public/categories/kudacona.jpeg";
 import im3 from "../../public/categories/harbi.png";

@@ -1,10 +1,9 @@
-import { productsMainCategories, Routes, sortDropdownText } from "@consts";
+import { useRouter } from "next/router";
+import { useAppDispatch } from "@store";
+import { useQueryParams } from "hooks/useQueryParams";
+import { productsMainCategories, sortDropdownText } from "@consts";
 import { ILangTitles } from "@interfaces";
 import { getProducts } from "../../src/store/slices/products";
-import { useAppDispatch } from "@store";
-import { useRouter } from "next/router";
-import React from "react";
-import { useQueryParams } from "hooks/useQueryParams";
 
 export const ShopTopBar = () => {
   const { addQueryParams } = useQueryParams();

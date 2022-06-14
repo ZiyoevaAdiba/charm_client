@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 
 export const ImageModal = ({ currentImage }: { currentImage: string }) => {
@@ -11,10 +10,7 @@ export const ImageModal = ({ currentImage }: { currentImage: string }) => {
       aria-hidden="true"
     >
       <div className="modal-dialog ">
-        <div
-          className="modal-content p-3 "
-          // style={{ width: "1000px", height: "1000px" }}
-        >
+        <div className="modal-content p-3 ">
           <div className="modal-header border-0">
             <button
               type="button"

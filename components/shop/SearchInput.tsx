@@ -1,8 +1,8 @@
+import React, { ChangeEvent, useEffect, useState } from "react";
+import { useRouter } from "next/router";
 import { Apis, noResultsText, Routes, searchPlaceholderText } from "@consts";
 import { ILangTitles, IProductDTO, IProductsResponse } from "@interfaces";
 import { Send } from "@utils";
-import { useRouter } from "next/router";
-import React, { ChangeEvent, useEffect, useState } from "react";
 
 export const SearchInput = () => {
   const router = useRouter();

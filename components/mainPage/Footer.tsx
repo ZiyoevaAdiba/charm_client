@@ -1,19 +1,19 @@
 import React from "react";
-import logo from "../../public/logo.svg";
+import { useRouter } from "next/router";
 import Image from "next/image";
+import logo from "../../public/logo.svg";
 import {
   companyAddress,
   companyDescription,
   companySocials,
   navmenuItems,
 } from "@consts";
-import { useRouter } from "next/router";
 
 export const Footer = () => {
   const { locale, pathname } = useRouter();
 
   return (
-    <footer className="footer" >
+    <footer className="footer">
       <div className="container">
         <div className="row p-3">
           <div className="col-lg-3 col-md-6 col-sm-6">

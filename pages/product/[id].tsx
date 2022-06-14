@@ -1,5 +1,7 @@
-import { GetStaticPaths, GetStaticProps, NextPage } from "next";
+import Link from "next/link";
 import Head from "next/head";
+import { useRouter } from "next/router";
+import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { ILangTitles, IProductDTO } from "@interfaces";
 import { Send } from "@utils";
 import {
@@ -10,11 +12,9 @@ import {
   Routes,
   seasons,
 } from "@consts";
-import { useRouter } from "next/router";
 import { MainLayout } from "src/layouts";
 import { Characteristic, ImageSlider } from "components";
 import { ColorBoxes } from "components/shop/ColorBoxes";
-import Link from "next/link";
 
 interface IProps {
   product: IProductDTO;
@@ -82,7 +82,9 @@ const ProductDetail: NextPage<IProps> = ({ product }) => {
                   <Characteristic
                     title={characteristics.subCategory[locale as ILangTitles]}
                     value={
-                      product.category.subCategory.name[locale as ILangTitles]
+                      product.category.subCategory[0].name[
+                        locale as ILangTitles
+                      ]
                     }
                   />
                 )}

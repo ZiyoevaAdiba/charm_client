@@ -1,21 +1,13 @@
-import {
-  Apis,
-  noResultsText,
-  Routes,
-  searchResultText,
-  sortDropdownText,
-} from "@consts";
-import { ILangTitles, IProductsResponse } from "@interfaces";
-import { getProducts, setProducts } from "../src/store/slices/products";
-import { useAppDispatch, useAppSelector, wrapper } from "@store";
-import { Send } from "@utils";
-import { ProductPreview, TagsBar } from "components";
-import { useQueryParams } from "hooks/useQueryParams";
-import { GetServerSideProps } from "next";
-import { useRouter } from "next/router";
-import React, { useEffect } from "react";
-import { MainLayout } from "src/layouts";
 import Head from "next/head";
+import React, { useEffect } from "react";
+import { useRouter } from "next/router";
+import { useQueryParams } from "hooks/useQueryParams";
+import { useAppDispatch, useAppSelector } from "@store";
+import { MainLayout } from "src/layouts";
+import { ProductPreview, TagsBar } from "components";
+import { Routes, searchResultText, sortDropdownText } from "@consts";
+import { ILangTitles } from "@interfaces";
+import { getProducts } from "../src/store/slices/products";
 
 const Search = () => {
   const dispatch = useAppDispatch();

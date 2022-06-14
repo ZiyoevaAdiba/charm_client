@@ -1,8 +1,8 @@
 import Image from "next/image";
-import React, { ChangeEvent } from "react";
+import React from "react";
+import { useRouter } from "next/router";
 import { navmenuItems, companyDescriptionLogo } from "@consts";
 import logo from "../../public/logo.svg";
-import { useRouter } from "next/router";
 import { ILangTitles } from "@interfaces";
 import { LanguageSelector } from "components";
 

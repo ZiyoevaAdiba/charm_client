@@ -10,3 +10,4 @@ export * from "./Footer";
 export * from "./Contacts";
 export * from "./ShoesCategories";
 export * from "./HoverWrapper";
+export * from "./Video";
