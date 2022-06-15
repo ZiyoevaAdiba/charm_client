@@ -1,4 +1,4 @@
-import { ILanguages, IProductImage } from ".";
+import { ICategory, ILanguages, IProductImage } from ".";
 
 export interface IProductDTO {
   id: number;
@@ -28,13 +28,6 @@ export interface IProductsState {
   loading: boolean;
   totalElements: number;
   products: IProductDTO[];
-}
-
-export interface ICategory {
-  id: number;
-  parentId: number;
-  name: ILanguages;
-  subCategory: ICategory | null;
 }
 
 export interface CharacteristicProps {

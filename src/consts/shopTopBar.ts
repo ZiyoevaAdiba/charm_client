@@ -2,25 +2,26 @@ export const sortDropdownText = {
   title: {
     en: "Sort",
     ru: "Сортировать",
-    tj: "",
-    ch: "",
+    tj: "Навъ",
+    ch: "种类",
   },
+
   options: [
     {
       title: {
         ru: "Сначала дешевые",
-        en: "First cheap",
-        tj: "",
-        ch: "",
+        en: "Cheap first",
+        tj: "Аввал арзон",
+        ch: "便宜第一",
       },
       value: "0",
     },
     {
       title: {
         ru: "Сначала дорогие",
-        en: "First expensive",
-        tj: "",
-        ch: "",
+        en: "Expensive first",
+        tj: "Аввал гарон",
+        ch: "先贵",
       },
       value: "1",
     },
@@ -29,7 +30,7 @@ export const sortDropdownText = {
 
 export const searchResultText = {
   ru: "Результаты поиска:",
-  en: "Search results:",
-  tj: "",
-  ch: "",
+  en: "Searching results:",
+  tj: "Натиҷаҳои ҷустуҷӯ:",
+  ch: "搜索结果",
 };

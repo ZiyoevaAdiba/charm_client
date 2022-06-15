@@ -14,3 +14,8 @@ export interface IProductImage {
 
 export type contactType = "name" | "email" | "body" | "phoneNumber";
 export type categoryNamesType = "shoes" | "leather" | "belts" | "soles";
+
+export interface IBannerDTO {
+  id: number;
+  imagePath: string;
+}

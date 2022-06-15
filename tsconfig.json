@@ -16,17 +16,20 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
+      "@components/*": ["src/components/*"],
       "@components": ["src/components"],
       "@utils": ["src/utils"],
       "@interfaces": ["src/interfaces"],
       "@styles/*": ["styles/*"],
       "@consts": ["src/consts"],
       "@store": ["src/store"],
-      "@slices": ["src/store/slices/*"],
+      "@layouts": ["src/layouts"],
+      "@slices": ["src/store/slices"],
+      "@hooks":["src/hooks"],
+      "@public/*": ["public/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }
 
-// http://192.168.15.199:7145/

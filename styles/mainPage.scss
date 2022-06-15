@@ -24,36 +24,36 @@
   font-family: serif, sans-serif;
 }
 
-.counter-title{
+.counter-title {
   font-size: 1.2rem;
 }
 
-.footer{
-  padding: 10px 0px; 
+.footer {
+  padding: 10px 0px;
   background: #222222;
   color: #ddd;
   font-size: 14px;
   margin-top: auto;
 
-  h5{
+  h5 {
     color: #dddddd;
   }
-  p{
+  p {
     text-align: left;
   }
-  ul{
+  ul {
     padding: 0px;
   }
-  .footer-item{
+  .footer-item {
     float: left;
   }
 }
 
-li{
+li {
   list-style: none;
 }
 
-.form-inputs{
+.form-inputs {
   background-color: #f2f2f2;
   box-shadow: 0 1px 2px rgb(0 0 0 / 12%) inset;
   border: none;
@@ -64,7 +64,7 @@ li{
   background-color: #f2f2f2;
 }
 
-.card-text{
+.card-text {
   display: -webkit-box;
   font-size: 14px;
   -webkit-line-clamp: 7;
@@ -73,8 +73,8 @@ li{
   text-overflow: ellipsis;
 }
 
-.footer-scroll-up{
-  a{
+.footer-scroll-up {
+  a {
     border-radius: 0px 20px 0 0;
     color: #999999;
     background: #222222;
@@ -89,9 +89,9 @@ li{
     transition: all 0.2s linear 0s;
     width: 50px;
     transform: rotate(-45deg);
-    i{
-    transform: rotate(45deg);
-    margin-left: 15px;
+    i {
+      transform: rotate(45deg);
+      margin-left: 15px;
     }
   }
 }
@@ -101,11 +101,11 @@ select {
   border: none;
 }
 
-.shoe-category-title{
+.shoe-category-title {
   font-weight: 700;
   letter-spacing: 1.5px;
   font-size: 14px;
-  &:hover{
+  &:hover {
     color: #03c4eb;
     cursor: pointer;
   }
@@ -126,12 +126,11 @@ select {
   cursor: pointer;
 }
 
-section{
+section {
   padding: 75px 60px 0px 60px;
   @media screen and (max-width: 768px) {
-    padding: 75px 15px 0px 15px;  
+    padding: 75px 15px 0px 15px;
   }
-  
 }
 
 .form-control:focus {

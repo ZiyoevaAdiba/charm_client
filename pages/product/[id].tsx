@@ -1,13 +1,19 @@
-import { GetStaticPaths, GetStaticProps, NextPage } from "next";
+import Link from "next/link";
 import Head from "next/head";
-import { ILangTitles, IProductDTO, IProductImage } from "@interfaces";
-import { Send } from "@utils";
-import { Apis, characteristics, characteristicsTitle, seasons } from "@consts";
 import { useRouter } from "next/router";
-import { MainLayout } from "src/layouts";
-import { Characteristic, ImageSlider } from "components";
-import { useEffect } from "react";
-import { ColorBoxes } from "components/shop/ColorBoxes";
+import { GetStaticPaths, GetStaticProps, NextPage } from "next";
+import { ILangTitles, IProductDTO } from "@interfaces";
+import { Send } from "@utils";
+import {
+  Apis,
+  categoryIn4Languages,
+  characteristics,
+  characteristicsTitle,
+  Routes,
+  seasons,
+} from "@consts";
+import { Characteristic, ColorBoxes, ImageSlider } from "@components/shop";
+import { MainLayout } from "@layouts";
 
 interface IProps {
   product: IProductDTO;
@@ -20,17 +26,25 @@ const ProductDetail: NextPage<IProps> = ({ product }) => {
   return (
     <>
       <Head>
-        <title>Страница продукта {product.name[locale as ILangTitles]}</title>I
+        <title>Страница продукта {product.name[locale as ILangTitles]}</title>
       </Head>
       {/* product detail page like in market stores */}
 
       <MainLayout>
         <div className="container py-5 max-vh-100">
           <div className="row">
+            <p className="text-center fs-5">
+              {categoryIn4Languages[locale as ILangTitles]}:
+              <Link href={Routes.shop + "/" + product.category?.id}>
+                <a className="text-primary ps-2">
+                  {product.category?.name[locale as ILangTitles]}
+                </a>
+              </Link>
+            </p>
             <div className="col col-sm-7">
               <ImageSlider productImages={product.productImages} />
             </div>
-            <div className="col col-sm-5">
+            <div className="col col-sm-5 pt-3">
               <ul>
                 <h3 className="fw-bold" style={{ letterSpacing: "1px" }}>
                   {product.name[locale as ILangTitles]}
@@ -67,17 +81,19 @@ const ProductDetail: NextPage<IProps> = ({ product }) => {
                   <Characteristic
                     title={characteristics.subCategory[locale as ILangTitles]}
                     value={
-                      product.category.subCategory.name[locale as ILangTitles]
+                      product.category.subCategory[0].name[
+                        locale as ILangTitles
+                      ]
                     }
                   />
                 )}
-                {product.length && (
+                {product.length !== null && (
                   <Characteristic
                     title={characteristics.length[locale as ILangTitles]}
                     value={product.length}
                   />
                 )}
-                {product.width && (
+                {product.width !== null && (
                   <Characteristic
                     title={characteristics.width[locale as ILangTitles]}
                     value={product.width}

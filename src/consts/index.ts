@@ -11,3 +11,4 @@ export * from "./shoesCategories";
 export * from "./shopTopBar";
 export * from "./shared";
 export * from "./fields";
+export * from "./video";

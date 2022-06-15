@@ -4,6 +4,7 @@ export const companyDescriptionLogo = {
   en: "Manufacture of footwear and other leather products",
   ch: "鞋生产和其他皮革的产品。",
 };
+
 export const navmenuItems = [
   {
     title: {

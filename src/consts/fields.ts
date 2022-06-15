@@ -1,19 +1,19 @@
 export const characteristicsTitle = {
   ru: "Характеристики:",
   en: "Characteristics:",
-  tj: "Характеристикаҳо:",
-  ch: "",
+  tj: "Хусусиятҳо:",
+  ch: "特征",
 };
 
 export const characteristics = {
   price: {
     ru: "Цена",
     en: "Price",
-    tj: "",
-    ch: "",
+    tj: "Нарх",
+    ch: "价格",
   },
   seasons: {
-    tj: "Фасл",
+    tj: "Мавсим",
     ru: "Сезон",
     en: "Season",
     ch: "季节",

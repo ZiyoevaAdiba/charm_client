@@ -1,8 +1,15 @@
+export const categoryIn4Languages = {
+  en: "Category",
+  tj: "Категория",
+  ru: "Категория",
+  ch: "类别",
+};
+
 export const seasonTitle = {
   ru: "Сезон",
   en: "Season",
-  tj: "Сезон",
-  ch: "",
+  tj: "Мавсим",
+  ch: "季节",
 };
 
 export const seasons = [
@@ -10,8 +17,8 @@ export const seasons = [
     title: {
       ru: "Зима",
       en: "Winter",
-      tj: "Зима",
-      ch: "",
+      tj: "Зимистон",
+      ch: "冬天",
     },
     value: "1",
   },
@@ -19,8 +26,8 @@ export const seasons = [
     title: {
       ru: "Весна",
       en: "Spring",
-      tj: "Весна",
-      ch: "",
+      tj: "Баҳор",
+      ch: "春天",
     },
     value: "2",
   },
@@ -28,8 +35,8 @@ export const seasons = [
     title: {
       ru: "Лето",
       en: "Summer",
-      tj: "Лето",
-      ch: "",
+      tj: "Тобистон",
+      ch: "夏天",
     },
     value: "3",
   },
@@ -37,10 +44,9 @@ export const seasons = [
     title: {
       ru: "Осень",
       en: "Autumn",
-      tj: "Осень",
-      ch: "",
+      tj: "Тирамоҳ",
+      ch: "秋天",
     },
     value: "4",
   },
 ];
-

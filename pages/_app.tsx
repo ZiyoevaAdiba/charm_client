@@ -1,4 +1,5 @@
 import "../styles/globals.scss";
+import Head from "next/head";
 import type { AppProps } from "next/app";
 import { useEffect } from "react";
 import AOS from "aos";
@@ -16,7 +17,14 @@ function MyApp({ Component, pageProps }: AppProps) {
       offset: 50,
     });
   }, []);
-  return <Component {...pageProps} />;
+  return (
+    <>
+      <Head>
+        <link rel="icon" href="/logo.svg" />
+      </Head>
+      <Component {...pageProps} />
+    </>
+  );
 }
 
 // export default MyApp;
