@@ -72,7 +72,6 @@ export const getProducts =
       dispatch(setProducts(productsResponse));
     } finally {
       dispatch(stopFetching());
-      // console.log(error);
     }
   };
 

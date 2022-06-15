@@ -21,7 +21,6 @@ export const ImageSlider: FC<{ productImages: IProductImage[] }> = ({
     const filteredImages = productImages.filter(
       (image) => image.color === selectedColor
     );
-    console.log(selectedColor, filteredImages);
 
     setImagesWithSelectedColor(selectedColor ? filteredImages : productImages);
   }, [selectedColor]);
